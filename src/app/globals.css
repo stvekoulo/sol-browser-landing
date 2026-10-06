@@ -1,0 +1,204 @@
+@import "tailwindcss" source("..");
+
+@font-face {
+  font-family: "Exposure";
+  src: url("/fonts/205TF-Exposure.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ABCOracle";
+  src: url("/fonts/ABCOracle-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ABCOracle";
+  src: url("/fonts/ABCOracle-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ABCOracle";
+  src: url("/fonts/ABCOracle-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ABCOracle";
+  src: url("/fonts/ABCOracle-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ABCFavoritMono";
+  src: url("/fonts/ABCFavoritMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #f8f8f8;
+  --foreground: #111111;
+  --font-serif: "Exposure", Georgia, serif;
+  --font-sans: "ABCOracle", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "ABCFavoritMono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Dia editorial typography & rich-text system */
+.dia-h1 {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 52px;
+  letter-spacing: -0.04em;
+}
+.dia-h2 {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 41px;
+  letter-spacing: -0.04em;
+}
+.dia-h3 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 800px) {
+  .dia-h1 { font-size: 72px; line-height: 72px; }
+  .dia-h2 { font-size: 54px; line-height: 60px; }
+  .dia-h3 { font-size: 34px; line-height: 37px; }
+}
+
+.dia-rich-text h2 { margin-bottom: 16px; color: rgba(0, 0, 0, 0.85); }
+.dia-rich-text h3 { margin-top: 32px; margin-bottom: 16px; color: rgba(0, 0, 0, 0.85); }
+.dia-rich-text p,
+.dia-rich-text ul,
+.dia-rich-text ol { margin-bottom: 16px; color: rgba(0, 0, 0, 0.6); }
+.dia-rich-text p:last-child,
+.dia-rich-text ul:last-child { margin-bottom: 0; }
+.dia-rich-text ul li { position: relative; padding-left: 1.5em; margin-bottom: 4px; }
+.dia-rich-text ul li:last-child { margin-bottom: 0; }
+.dia-rich-text ul li::before { content: "\2022"; position: absolute; left: 0; }
+.dia-rich-text ul li ul { margin-top: 4px; margin-bottom: 4px; }
+.dia-rich-text ul li ul li::before { content: "\25E6"; }
+.dia-rich-text a {
+  color: rgba(88, 99, 234, 1);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: currentColor;
+  transition: text-decoration-color 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.dia-rich-text a:hover { text-decoration-color: transparent; }
+
+/* Proportional scaling for the Sunrise Hero stage */
+.sunrise-boundary { --stack-shift: clamp(0px, calc(100svh - 215vw), 40px); }
+.sunrise-headline {
+  top: 104px;
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-variation-settings: "EXPO" -15;
+}
+.sunrise-wordmark {
+  top: max(180px, calc(50svh - 50.5vw + 31.4px - var(--stack-shift)));
+  width: min(80vw, 480px);
+}
+.sunrise-video {
+  position: absolute;
+  left: 50%;
+  top: max(230px, calc(50svh - 20.7vw - 8.6px + var(--stack-shift)));
+  width: min(calc(100vw - 32px), 568px);
+  transform: translateX(-50%);
+}
+.sunrise-video-frame { border-radius: 12px; }
+.sunrise-dock { height: 200px; pointer-events: none; }
+.sunrise-dome-ellipse { aspect-ratio: 2034 / 978; width: 220vw; }
+.sunrise-cta-wrap { bottom: 48px; }
+
+@media (min-width: 600px) {
+  .sunrise-wordmark { top: max(180px, calc(50svh - 271.5px - var(--stack-shift))); }
+  .sunrise-video { top: max(230px, calc(50svh - 132.5px + var(--stack-shift))); }
+}
+
+@media (min-width: 800px) {
+  .sunrise-boundary {
+    --s: min(calc(100vw / 1440), calc(100svh / 854));
+    --g: max(0px, calc((1200px - 100vw) * 0.2));
+    --tail: max(110px, calc(48px + 61 * var(--s)));
+    --pad: max(0px, calc(104px - 116 * var(--s)));
+    --dock-height: calc(42 * var(--s) + var(--tail));
+  }
+  .sunrise-headline {
+    inset-inline: 0;
+    top: calc(116 * var(--s) + var(--pad));
+    font-size: max(28px, calc(38.793 * var(--s)));
+  }
+  .sunrise-wordmark {
+    top: calc(198 * var(--s) + var(--pad) + var(--g));
+    width: calc(763 * var(--s));
+  }
+  .sunrise-video {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-top: calc(398 * var(--s) + var(--pad) + var(--g));
+    width: calc(1115 * var(--s));
+  }
+  .sunrise-video-frame { border-radius: calc(16 * var(--s)); }
+  .sunrise-dock { height: var(--dock-height); }
+  .sunrise-dome-ellipse { width: max(154vw, calc(2200 * var(--s))); }
+  .sunrise-cta-wrap { inset-inline: 0; bottom: auto; top: calc(42 * var(--s)); }
+}
+
+@media (min-width: 1000px) {
+  .sunrise-dome-ellipse { width: max(141vw, calc(2034 * var(--s))); }
+}
+
+@keyframes modalBackdropIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modalCardIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.animate-modal-backdrop { animation: modalBackdropIn 0.22s ease-out both; }
+.animate-modal-card { animation: modalCardIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Hide top navbar when the video modal is open */
+html[data-modal-open="true"] .site-navbar {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px);
+}
