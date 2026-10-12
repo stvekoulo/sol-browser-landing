@@ -150,14 +150,56 @@ export function FeaturesContent() {
                 </p>
               </div>
 
-              {/* Section 2: Device Mockups & Inspection */}
+              {/* Section 2: Isolated Site Sessions (Multi-User & Multi-Account) */}
+              <div id="isolated-sessions" className="scroll-mt-[100px]">
+                <h2 className="dia-h2">Isolated Site Sessions</h2>
+                <p>
+                  Most browsers share the same cookies and login tokens across every tab. If you need
+                  to test your app as an administrator and as a standard user at the same time, you
+                  usually have to open private windows, use secondary browsers, or constantly log out
+                  and log back in.
+                </p>
+                <p>
+                  Sol includes native session isolation built directly into tabs and domains. You can
+                  assign distinct session identities (Admin, User, Guest, or custom names) to any tab
+                  or site.
+                </p>
+
+                <p>
+                  <strong className="font-bold text-black">What session isolation gives you</strong>
+                </p>
+                <ul>
+                  <li>
+                    Multiple accounts on the same site simultaneously
+                    <ul>
+                      <li>
+                        Stay signed into two or three different accounts on GitHub, AWS, Google, or
+                        your local web app in the same window
+                      </li>
+                      <li>
+                        Each session runs with completely isolated cookies, local storage, and
+                        authentication tokens
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Persistent site rules: bind specific domains to a dedicated session identity so
+                    they always open with the right account
+                  </li>
+                  <li>
+                    Zero friction: OAuth and SAML sign-in flows resolve smoothly within their
+                    assigned session without leaking state to other tabs
+                  </li>
+                </ul>
+              </div>
+
+              {/* Section 3: Device Mockups & Inspection */}
               <div id="device-mockups-and-inspection" className="scroll-mt-[100px]">
                 <h2 className="dia-h2">Device Mockups &amp; Inspection</h2>
                 <p>
                   In standard browsers, responsive inspection only resizes the page into a flat
-                  rectangular box of pixels. You only get raw dimensions, not real device frames. If
-                  you want realistic mobile mockups or side-by-side device previews, you have to
-                  install third-party extensions that eat even more memory.
+                  rectangular box of pixels. If you want realistic mobile frames or side-by-side
+                  device previews, you have to install third-party extensions that eat even more memory.
                 </p>
                 <p>
                   Sol builds real device frames and developer inspection tools directly into the
@@ -183,6 +225,11 @@ export function FeaturesContent() {
                     </ul>
                   </li>
                   <li>
+                    In-page Design &amp; CSS Inspector: press Alt or Shift and hover any element to
+                    see its font family, size, weight, line-height, letter-spacing, padding, margin,
+                    colors, and WCAG contrast ratio in a floating pill, with one-click CSS copying
+                  </li>
+                  <li>
                     Lightweight Network Panel that filters live requests by All, API (XHR and
                     Fetch), or Errors, with formatted JSON request and response bodies
                   </li>
@@ -197,10 +244,10 @@ export function FeaturesContent() {
                 </ul>
               </div>
 
-              {/* Sections 3 & 4: Everyday Polish & Migration + Coming Soon */}
+              {/* Sections 4 & 5: Everyday Polish & Notes + Coming Soon */}
               <FeaturesWorkspaceAndRoadmap />
 
-              {/* Section 5: FAQ Accordion */}
+              {/* Section 6: FAQ Accordion */}
               <FeaturesFaq />
             </div>
           </div>

@@ -3,7 +3,7 @@ import { Navbar } from '@/components/Navbar';
 import { FeaturesContent } from '@/components/features/FeaturesContent';
 
 const DESCRIPTION =
-  'Sol is built for normal daily browsing just like other browsers, with a clean, refined interface that uses a fraction of your computer’s memory.';
+  'Sol is built for normal daily browsing with a clean, refined interface, using a fraction of your computer’s memory alongside isolated site sessions, native device mockups, and built-in quick notes.';
 
 export const metadata: Metadata = {
   title: 'Features',

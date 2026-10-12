@@ -13,8 +13,9 @@ export type FaqItem = {
 // Sticky sidebar links for the Sol Features page, mirroring Dia's editorial layout.
 export const FEATURES_SIDEBAR_LINKS: SidebarSection[] = [
   { id: 'why-i-built-sol', label: 'Why I Built Sol' },
+  { id: 'isolated-sessions', label: 'Isolated Site Sessions' },
   { id: 'device-mockups-and-inspection', label: 'Device Mockups & Inspection' },
-  { id: 'everyday-polish-and-migration', label: 'Everyday Polish & Migration' },
+  { id: 'everyday-polish-and-notes', label: 'Everyday Polish & Notes' },
   { id: 'coming-soon', label: 'Coming Soon' },
   { id: 'faq', label: 'FAQ' },
   {
@@ -24,13 +25,20 @@ export const FEATURES_SIDEBAR_LINKS: SidebarSection[] = [
   },
 ];
 
-// Direct, concrete FAQ items written without AI filler.
+// Direct, concrete FAQ items without corporate filler or AI claims.
 export const FEATURES_FAQ_ITEMS: FaqItem[] = [
   {
     id: 'why-does-sol-use-so-little-ram',
     question: 'How does Sol use 25.8 MB of RAM when other browsers use hundreds?',
     answer: [
       'Most browsers bundle an entire copy of Chromium along with background updaters, sync daemons, telemetry services, and dozens of helper processes. Sol uses a lightweight native C# host on top of the Windows system WebView2 runtime, keeps its own UI tiny, and puts inactive tabs in collapsed groups to sleep so they release their memory.',
+    ],
+  },
+  {
+    id: 'how-do-sessions-work',
+    question: 'How do isolated site sessions work in Sol?',
+    answer: [
+      'Sol lets you assign separate session identities (such as Admin, User, Guest, or custom names) to specific tabs or sites. Each session runs with isolated cookies, local storage, and authentication tokens, so you can stay signed into multiple accounts on the same website in the same window without opening private windows or switching browsers.',
     ],
   },
   {
@@ -48,10 +56,10 @@ export const FEATURES_FAQ_ITEMS: FaqItem[] = [
     ],
   },
   {
-    id: 'profiles-and-tab-groups',
-    question: 'How do Profiles and Tab Groups work?',
+    id: 'quick-notes-and-reader',
+    question: 'How do built-in Quick Notes and Reader Mode work?',
     answer: [
-      'You can create separate browser profiles (for example, Work, Personal, or a specific client) with isolated cookies, history, and zoom settings. Inside any window, you can organize tabs into named groups with custom colors and icons. Collapsing a group unloads its background tabs from RAM until you click them again.',
+      'Quick Notes is a built-in workspace (start.sol/#notes) and sidebar drawer where you can jot down thoughts, links, or code snippets tied to your browsing sessions and page URLs, stored locally with full export support. Reader Mode strips noisy websites down to clean, readable typography with a single click.',
     ],
   },
   {
@@ -60,6 +68,13 @@ export const FEATURES_FAQ_ITEMS: FaqItem[] = [
     answer: [
       'Standard browser DevTools only resize a flat rectangular viewport to a pixel width. If you want realistic device frames or side-by-side previews, you normally have to install third-party extensions that consume even more memory.',
       'Sol includes real device mockups (iPhone, iPad, MacBook, iMac) natively. You can switch any tab into a device frame, rotate it, or open Compare Screens to view your site across phone, tablet, and desktop mockups at the same time.',
+    ],
+  },
+  {
+    id: 'built-in-design-inspector',
+    question: 'What is the built-in Design Inspector?',
+    answer: [
+      'You can press Alt or Shift and hover any element on a page to see its exact font family, size, weight, line-height, letter-spacing, padding, margin, colors, and WCAG contrast ratio in a floating pill, and copy the clean CSS in one click.',
     ],
   },
   {
@@ -84,24 +99,10 @@ export const FEATURES_FAQ_ITEMS: FaqItem[] = [
     ],
   },
   {
-    id: 'split-view-and-pip',
-    question: 'How do Split View and the floating video player work?',
-    answer: [
-      'Split View lets you place two tabs side by side (50/50, 1/3, 2/3, or drag the divider freely). And if a video is playing when you switch to another tab, Sol automatically pops it into a floating Picture-in-Picture window.',
-    ],
-  },
-  {
-    id: 'upcoming-ai-and-notes',
-    question: 'When are built-in AI and quick notes coming?',
-    answer: [
-      'Integrated sidebar Notes and optional local/cloud AI assistance (page summaries, instant translation, and code/error explanations) are in active development and will ship in upcoming releases without adding background memory bloat when idle.',
-    ],
-  },
-  {
     id: 'where-is-data-stored',
     question: 'Where is my browsing data stored?',
     answer: [
-      'All bookmarks, history, settings, and passwords stay locally on your computer. Sol requires no account to use and collects zero telemetry.',
+      'All bookmarks, history, settings, sessions, notes, and passwords stay locally on your computer. Sol requires no account to use and collects zero telemetry.',
     ],
   },
   {
