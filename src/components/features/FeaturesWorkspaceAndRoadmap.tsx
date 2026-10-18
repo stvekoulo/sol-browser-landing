@@ -91,6 +91,10 @@ export function FeaturesWorkspaceAndRoadmap() {
             Audio Read-Aloud for Reader Mode: listen to long articles or recipes read aloud in the
             background while working on other tasks
           </li>
+          <li>
+            More Sol AI tools: compare several pages in a table, extract structured data from a page
+            to Markdown or CSV, and explain a screenshot or an error on screen
+          </li>
         </ul>
 
         <p>

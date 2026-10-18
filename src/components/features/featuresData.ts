@@ -13,6 +13,7 @@ export type FaqItem = {
 // Sticky sidebar links for the Sol Features page, mirroring Dia's editorial layout.
 export const FEATURES_SIDEBAR_LINKS: SidebarSection[] = [
   { id: 'why-i-built-sol', label: 'Why I Built Sol' },
+  { id: 'sol-ai', label: 'Sol AI with ChatGPT' },
   { id: 'isolated-sessions', label: 'Isolated Site Sessions' },
   { id: 'device-mockups-and-inspection', label: 'Device Mockups & Inspection' },
   { id: 'everyday-polish-and-notes', label: 'Everyday Polish & Notes' },
@@ -25,13 +26,29 @@ export const FEATURES_SIDEBAR_LINKS: SidebarSection[] = [
   },
 ];
 
-// Direct, concrete FAQ items without corporate filler or AI claims.
+// Direct, concrete FAQ items without corporate filler; Sol AI answers describe only what ships today.
 export const FEATURES_FAQ_ITEMS: FaqItem[] = [
   {
     id: 'why-does-sol-use-so-little-ram',
     question: 'How does Sol use 25.8 MB of RAM when other browsers use hundreds?',
     answer: [
       'Most browsers bundle an entire copy of Chromium along with background updaters, sync daemons, telemetry services, and dozens of helper processes. Sol uses a lightweight native C# host on top of the Windows system WebView2 runtime, keeps its own UI tiny, and puts inactive tabs in collapsed groups to sleep so they release their memory.',
+    ],
+  },
+  {
+    id: 'what-is-sol-ai',
+    question: 'What is Sol AI, and do I need to pay for it?',
+    answer: [
+      'Sol AI is an optional assistant that uses your own ChatGPT Plus or Pro subscription through Sign in with ChatGPT. There is no API key to create and no separate bill; requests count toward your ChatGPT plan usage, which you can review from the Manage usage button in Settings > Sol.',
+      'Once connected, it can summarize, explain, translate or fix text, answer questions about the open site by reading it live and following its links, chat in a side panel, and search, summarize or create your notes.',
+    ],
+  },
+  {
+    id: 'what-does-sol-ai-send',
+    question: 'What does Sol AI send to OpenAI?',
+    answer: [
+      'Only what you act on: your question, the text you selected, and the page content Sol AI reads to answer it. Clicking, typing or navigating on a site always asks for your approval first, and password, card and one-time-code fields are never read.',
+      'Daily topic sorting of bookmarks and history is off by default; when you turn it on, it sends page titles and domains only. Sol AI does not run in private windows.',
     ],
   },
   {
@@ -102,7 +119,7 @@ export const FEATURES_FAQ_ITEMS: FaqItem[] = [
     id: 'where-is-data-stored',
     question: 'Where is my browsing data stored?',
     answer: [
-      'All bookmarks, history, settings, sessions, notes, and passwords stay locally on your computer. Sol requires no account to use and collects zero telemetry.',
+      'All bookmarks, history, settings, sessions, notes, and passwords stay locally on your computer. Sol requires no account to use and collects zero telemetry. The only exception is Sol AI, when you connect ChatGPT and ask it something: see the question above.',
     ],
   },
   {

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FEATURES_SIDEBAR_LINKS } from './featuresData';
 import { FeaturesFaq } from './FeaturesFaq';
 import { FeaturesWorkspaceAndRoadmap } from './FeaturesWorkspaceAndRoadmap';
+import { FeaturesSolAi } from './FeaturesSolAi';
 
 // Two-column editorial Features view in Dia's layout, written in direct developer voice.
 export function FeaturesContent() {
@@ -150,7 +151,10 @@ export function FeaturesContent() {
                 </p>
               </div>
 
-              {/* Section 2: Isolated Site Sessions (Multi-User & Multi-Account) */}
+              {/* Section 2: Sol AI with ChatGPT */}
+              <FeaturesSolAi />
+
+              {/* Section 3: Isolated Site Sessions (Multi-User & Multi-Account) */}
               <div id="isolated-sessions" className="scroll-mt-[100px]">
                 <h2 className="dia-h2">Isolated Site Sessions</h2>
                 <p>
@@ -193,7 +197,7 @@ export function FeaturesContent() {
                 </ul>
               </div>
 
-              {/* Section 3: Device Mockups & Inspection */}
+              {/* Section 4: Device Mockups & Inspection */}
               <div id="device-mockups-and-inspection" className="scroll-mt-[100px]">
                 <h2 className="dia-h2">Device Mockups &amp; Inspection</h2>
                 <p>
@@ -244,10 +248,10 @@ export function FeaturesContent() {
                 </ul>
               </div>
 
-              {/* Sections 4 & 5: Everyday Polish & Notes + Coming Soon */}
+              {/* Sections 5 & 6: Everyday Polish & Notes + Coming Soon */}
               <FeaturesWorkspaceAndRoadmap />
 
-              {/* Section 6: FAQ Accordion */}
+              {/* Section 7: FAQ Accordion */}
               <FeaturesFaq />
             </div>
           </div>

@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center"><img src="public/logo.png" alt="Sol" width="96"></p>
 
-## Getting Started
+# Sol Browser — landing page
 
-First, run the development server:
+The website of [Sol](https://gitlab.com/stevencrdkoulo/sol-browser), a light web browser for Windows with tabs in a sidebar, built-in developer tools and Sol AI, an optional assistant that runs on your own ChatGPT plan.
+
+![Sol, the browser presented by this site](public/captures/sol-browser.png)
+
+## Pages
+
+| Route | Content |
+|---|---|
+| `/` | Hero, download button and the product video |
+| `/features` | Why Sol exists, Sol AI with ChatGPT, isolated site sessions, device mockups and inspection, everyday polish and notes, roadmap, FAQ |
+| `/security` | Keeping Sol secure, permissions, extensions and backups, reporting and open source, FAQ |
+
+Downloads link to the [GitLab releases](https://gitlab.com/stevencrdkoulo/sol-browser/-/releases) of the browser.
+
+## Run it
+
+You need [Node.js](https://nodejs.org) (current LTS).
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open <http://localhost:3000>. `npm run build` checks and builds the static site; `npm run lint` runs ESLint.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The canonical address used for metadata, `robots.txt` and the sitemap is `https://solbrowser.com`, or `NEXT_PUBLIC_SITE_URL` when it is set.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Where to edit
 
-## Learn More
+- **Features page:** `src/components/features/`. Section text lives in `FeaturesContent.tsx`, `FeaturesSolAi.tsx` and `FeaturesWorkspaceAndRoadmap.tsx`; the sidebar links and FAQ answers in `featuresData.ts`.
+- **Security page:** `src/components/security/`, with its FAQ in `securityData.ts`.
+- **Home page:** `src/components/SunriseHero.tsx` and `src/components/Navbar.tsx`.
+- **Media:** `public/captures/` (screenshot, memory benchmark, product video) and `public/fonts/`.
 
-To learn more about Next.js, take a look at the following resources:
+Describe only what the browser actually ships: the features page is written from the browser's own [feature list](https://gitlab.com/stevencrdkoulo/sol-browser/-/blob/main/docs/sol-ai-features.md) and README.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Next.js](https://nextjs.org) 16 (App Router, statically rendered pages), React 19, Tailwind CSS 4 and TypeScript. This Next.js version differs from older releases: read the guides in `node_modules/next/dist/docs/` before changing framework code (see `AGENTS.md`).
