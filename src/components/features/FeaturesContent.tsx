@@ -3,9 +3,10 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { FEATURES_SIDEBAR_LINKS } from './featuresData';
-import { FeaturesFaq } from './FeaturesFaq';
+import { FeaturesMediaAndTools } from './FeaturesMediaAndTools';
+import { FeaturesDeveloperSection } from './FeaturesDeveloperSection';
 import { FeaturesWorkspaceAndRoadmap } from './FeaturesWorkspaceAndRoadmap';
-import { FeaturesSolAi } from './FeaturesSolAi';
+import { FeaturesFaq } from './FeaturesFaq';
 
 // Two-column editorial Features view in Dia's layout, written in direct developer voice.
 export function FeaturesContent() {
@@ -103,16 +104,15 @@ export function FeaturesContent() {
               <div id="why-i-built-sol" className="scroll-mt-[100px]">
                 <h2 className="dia-h2">Why I Built Sol</h2>
                 <p>
-                  Sol is built for normal, everyday browsing just like any other browser, without
-                  draining your computer&apos;s resources, and with a clean, carefully crafted
-                  interface that feels good to use all day.
+                  Sol is built for normal browsing just like other browsers, without draining your
+                  computer&apos;s resources, while staying aesthetic, beautiful, and premium.
                 </p>
                 <p>
                   It started as a personal tool I built for myself. Because I work on the web all
                   day, I kept wondering why other browsers eat so much RAM, stutter on pages with
-                  heavy animations, and eventually freeze or crash when you have multiple tabs open.
-                  I built Sol to cut that memory usage down to a fraction while keeping a polished,
-                  modern look.
+                  heavy animations, and eventually freeze or crash when multiple tabs stay open. I
+                  built Sol to cut memory usage down to a fraction while keeping a polished,
+                  modern interface.
                 </p>
 
                 {/* Real Windows Task Manager comparison capture */}
@@ -138,8 +138,8 @@ export function FeaturesContent() {
                 <p>
                   Instead of bundling a redundant 300 MB Chromium binary and spawning twenty
                   background helper processes, Sol pairs a lean native host with Windows&apos; shared
-                  WebView2 engine. Inactive tabs inside collapsed groups or pinned shortcuts go to
-                  sleep and release their memory completely until you click them again.
+                  WebView2 engine. Inactive tabs sleep and release their memory completely until you
+                  click them again.
                 </p>
 
                 <p>
@@ -151,107 +151,16 @@ export function FeaturesContent() {
                 </p>
               </div>
 
-              {/* Section 2: Sol AI with ChatGPT */}
-              <FeaturesSolAi />
+              {/* Sections 2 & 3: Native Video Downloader and Contextual Action Fan */}
+              <FeaturesMediaAndTools />
 
-              {/* Section 3: Isolated Site Sessions (Multi-User & Multi-Account) */}
-              <div id="isolated-sessions" className="scroll-mt-[100px]">
-                <h2 className="dia-h2">Isolated Site Sessions</h2>
-                <p>
-                  Most browsers share the same cookies and login tokens across every tab. If you need
-                  to test your app as an administrator and as a standard user at the same time, you
-                  usually have to open private windows, use secondary browsers, or constantly log out
-                  and log back in.
-                </p>
-                <p>
-                  Sol includes native session isolation built directly into tabs and domains. You can
-                  assign distinct session identities (Admin, User, Guest, or custom names) to any tab
-                  or site.
-                </p>
+              {/* Sections 4 & 5: Isolated Site Sessions and Developer & Design Tools */}
+              <FeaturesDeveloperSection />
 
-                <p>
-                  <strong className="font-bold text-black">What session isolation gives you</strong>
-                </p>
-                <ul>
-                  <li>
-                    Multiple accounts on the same site simultaneously
-                    <ul>
-                      <li>
-                        Stay signed into two or three different accounts on GitHub, AWS, Google, or
-                        your local web app in the same window
-                      </li>
-                      <li>
-                        Each session runs with completely isolated cookies, local storage, and
-                        authentication tokens
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    Persistent site rules: bind specific domains to a dedicated session identity so
-                    they always open with the right account
-                  </li>
-                  <li>
-                    Zero friction: OAuth and SAML sign-in flows resolve smoothly within their
-                    assigned session without leaking state to other tabs
-                  </li>
-                </ul>
-              </div>
-
-              {/* Section 4: Device Mockups & Inspection */}
-              <div id="device-mockups-and-inspection" className="scroll-mt-[100px]">
-                <h2 className="dia-h2">Device Mockups &amp; Inspection</h2>
-                <p>
-                  In standard browsers, responsive inspection only resizes the page into a flat
-                  rectangular box of pixels. If you want realistic mobile frames or side-by-side
-                  device previews, you have to install third-party extensions that eat even more memory.
-                </p>
-                <p>
-                  Sol builds real device frames and developer inspection tools directly into the
-                  browser, with zero extensions required:
-                </p>
-
-                <p>
-                  <strong className="font-bold text-black">Native Developer &amp; Inspection Tools</strong>
-                </p>
-                <ul>
-                  <li>
-                    Real device mockups and multi-screen comparison
-                    <ul>
-                      <li>
-                        Preview any site inside actual phone (iPhone), tablet (iPad), laptop
-                        (MacBook), or desktop (iMac) frames and rotate between portrait and
-                        landscape in one click
-                      </li>
-                      <li>
-                        Open Compare Screens to inspect your site on phone, tablet, and desktop
-                        mockups side by side in the same view
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    In-page Design &amp; CSS Inspector: press Alt or Shift and hover any element to
-                    see its font family, size, weight, line-height, letter-spacing, padding, margin,
-                    colors, and WCAG contrast ratio in a floating pill, with one-click CSS copying
-                  </li>
-                  <li>
-                    Lightweight Network Panel that filters live requests by All, API (XHR and
-                    Fetch), or Errors, with formatted JSON request and response bodies
-                  </li>
-                  <li>
-                    Built-in Screen Capture for a selected region, the visible viewport, or the full
-                    scrolling page, with an option to include the browser frame and mockups
-                  </li>
-                  <li>
-                    Split View for placing two tabs side by side (50/50, 1/3, 2/3, or free drag) to
-                    test a local build right next to your docs
-                  </li>
-                </ul>
-              </div>
-
-              {/* Sections 5 & 6: Everyday Polish & Notes + Coming Soon */}
+              {/* Sections 6 & 7: Everyday Polish & Notes + Coming Soon */}
               <FeaturesWorkspaceAndRoadmap />
 
-              {/* Section 7: FAQ Accordion */}
+              {/* Section 8: FAQ Accordion */}
               <FeaturesFaq />
             </div>
           </div>

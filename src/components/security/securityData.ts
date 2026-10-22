@@ -19,7 +19,7 @@ export const SECURITY_FAQ_ITEMS: FaqItem[] = [
     id: 'where-does-data-live',
     question: 'Where does my data live?',
     answer: [
-      'Your bookmarks, browsing history, open tabs, settings, and saved passwords live locally on your Windows PC inside an SQLite database (browser.db) and local profile files. Sol does not run a cloud sync server, so your personal browsing data never passes through its infrastructure. The one opt-in exception is Sol AI topic sorting, which sends page titles and domains to OpenAI once a day only if you turn it on.',
+      'Your bookmarks, browsing history, open tabs, settings, and saved passwords live locally on your Windows PC inside an SQLite database (browser.db) and local profile files. Sol does not run a cloud sync server, so your personal browsing data never passes through its infrastructure.',
     ],
   },
   {
@@ -33,7 +33,7 @@ export const SECURITY_FAQ_ITEMS: FaqItem[] = [
     id: 'do-you-sell-data',
     question: 'Do you collect or sell my browsing data?',
     answer: [
-      'No. Sol collects zero telemetry, builds no advertising profiles, and never sells or shares user data. What you browse stays on your machine. Sol AI is opt-in: when you connect your ChatGPT account, only what you ask about is sent to OpenAI under your own plan.',
+      'No. Sol collects zero telemetry, builds no advertising profiles, and never sells or shares user data. What you browse stays on your machine.',
     ],
   },
   {

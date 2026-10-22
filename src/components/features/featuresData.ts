@@ -10,12 +10,13 @@ export type FaqItem = {
   answer: string[];
 };
 
-// Sticky sidebar links for the Sol Features page, mirroring Dia's editorial layout.
+// Sticky sidebar links for the Sol Features page, matching Dia's editorial layout.
 export const FEATURES_SIDEBAR_LINKS: SidebarSection[] = [
   { id: 'why-i-built-sol', label: 'Why I Built Sol' },
-  { id: 'sol-ai', label: 'Sol AI with ChatGPT' },
+  { id: 'video-downloader', label: 'Native Video Downloader' },
+  { id: 'contextual-action-fan', label: 'Contextual Action Fan' },
   { id: 'isolated-sessions', label: 'Isolated Site Sessions' },
-  { id: 'device-mockups-and-inspection', label: 'Device Mockups & Inspection' },
+  { id: 'developer-tools', label: 'Developer & Design Tools' },
   { id: 'everyday-polish-and-notes', label: 'Everyday Polish & Notes' },
   { id: 'coming-soon', label: 'Coming Soon' },
   { id: 'faq', label: 'FAQ' },
@@ -26,29 +27,27 @@ export const FEATURES_SIDEBAR_LINKS: SidebarSection[] = [
   },
 ];
 
-// Direct, concrete FAQ items without corporate filler; Sol AI answers describe only what ships today.
+// Direct, concrete FAQ items without corporate filler, describing features that ship today.
 export const FEATURES_FAQ_ITEMS: FaqItem[] = [
   {
     id: 'why-does-sol-use-so-little-ram',
     question: 'How does Sol use 25.8 MB of RAM when other browsers use hundreds?',
     answer: [
-      'Most browsers bundle an entire copy of Chromium along with background updaters, sync daemons, telemetry services, and dozens of helper processes. Sol uses a lightweight native C# host on top of the Windows system WebView2 runtime, keeps its own UI tiny, and puts inactive tabs in collapsed groups to sleep so they release their memory.',
+      'Most browsers bundle an entire copy of Chromium along with background updaters, sync daemons, telemetry services, and dozens of helper processes. Sol uses a lightweight native C# host on top of the Windows system WebView2 runtime, keeps its own UI tiny, and puts inactive tabs to sleep so they release their memory.',
     ],
   },
   {
-    id: 'what-is-sol-ai',
-    question: 'What is Sol AI, and do I need to pay for it?',
+    id: 'how-does-video-downloader-work',
+    question: 'How does the built-in Video Downloader work?',
     answer: [
-      'Sol AI is an optional assistant that uses your own ChatGPT Plus or Pro subscription through Sign in with ChatGPT. There is no API key to create and no separate bill; requests count toward your ChatGPT plan usage, which you can review from the Manage usage button in Settings > Sol.',
-      'Once connected, it can summarize, explain, translate or fix text, answer questions about the open site by reading it live and following its links, chat in a side panel, and search, summarize or create your notes.',
+      'Sol detects media streams (MP4, WebM, HLS .m3u8, and DASH .mpd) automatically when videos play on a page. You choose your resolution from 480p up to 4K or 8K. Downloads run through a segmented range engine with pause and resume in native floating cards, backed by an integrated yt-dlp and FFmpeg helper. You do not need third-party downloader extensions or conversion websites.',
     ],
   },
   {
-    id: 'what-does-sol-ai-send',
-    question: 'What does Sol AI send to OpenAI?',
+    id: 'what-is-the-action-fan',
+    question: 'What is the Contextual Action Fan?',
     answer: [
-      'Only what you act on: your question, the text you selected, and the page content Sol AI reads to answer it. Clicking, typing or navigating on a site always asks for your approval first, and password, card and one-time-code fields are never read.',
-      'Daily topic sorting of bookmarks and history is off by default; when you turn it on, it sends page titles and domains only. Sol AI does not run in private windows.',
+      'The Action Fan is a radial spring menu that opens on right-click. Instead of scrolling through a long context menu, it presents quick actions adapted to what you clicked: web page, selected text, image, video, or link. You can copy, search, share, translate, inspect, or download in one direct motion.',
     ],
   },
   {
@@ -109,17 +108,10 @@ export const FEATURES_FAQ_ITEMS: FaqItem[] = [
     ],
   },
   {
-    id: 'screen-capture-modes',
-    question: 'What can I capture with the built-in screenshot tool?',
-    answer: [
-      'You can capture a selected area, the visible part of the page, or the full scrolling page. A checkbox lets you include the browser interface itself (top bar, sidebar, and active device mockups) when you want a clean product shot.',
-    ],
-  },
-  {
     id: 'where-is-data-stored',
     question: 'Where is my browsing data stored?',
     answer: [
-      'All bookmarks, history, settings, sessions, notes, and passwords stay locally on your computer. Sol requires no account to use and collects zero telemetry. The only exception is Sol AI, when you connect ChatGPT and ask it something: see the question above.',
+      'All bookmarks, history, settings, sessions, notes, and passwords stay locally on your computer in an SQLite database. Sol requires no account to use and collects zero telemetry.',
     ],
   },
   {
