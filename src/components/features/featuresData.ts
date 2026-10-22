@@ -18,6 +18,7 @@ export const FEATURES_SIDEBAR_LINKS: SidebarSection[] = [
   { id: 'isolated-sessions', label: 'Isolated Site Sessions' },
   { id: 'developer-tools', label: 'Developer & Design Tools' },
   { id: 'everyday-polish-and-notes', label: 'Everyday Polish & Notes' },
+  { id: 'for-web-developers', label: 'For Web Developers' },
   { id: 'coming-soon', label: 'Coming Soon' },
   { id: 'demos', label: 'Demos in Action' },
   { id: 'faq', label: 'FAQ' },

@@ -71,8 +71,8 @@ export function FeaturesMediaAndTools() {
             clean tab
           </li>
           <li>
-            On links: open in new tab, open in isolated session, copy clean URL without tracking
-            parameters, or open in split view
+            On links: open a navigable preview, open in a new tab or Split View, and use More for
+            copying the link or saving it to a note
           </li>
           <li>
             Spring-driven interaction: opens with natural momentum and closes cleanly when you release

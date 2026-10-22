@@ -66,6 +66,30 @@ export function FeaturesWorkspaceAndRoadmap() {
         </ul>
       </div>
 
+      <section id="for-web-developers" className="scroll-mt-[100px]">
+        <h2 className="dia-h2">For Web Developers</h2>
+        <p>Build, compare and debug directly in Sol. Open the device menu, Network panel or command palette to get started.</p>
+        <ul>
+          <li>
+            Synchronized interactions across Device Mockups: scroll, click, type in forms, or toggle
+            dark mode on one frame in Compare Screens and watch phone, tablet, and desktop mockups
+            mirror your actions simultaneously
+          </li>
+          <li>
+            API Request Replay &amp; Response Mocking: edit JSON payloads or force 401/500 status codes
+            in the Network panel to test error handling without touching your backend
+          </li>
+          <li>
+            Localhost LAN QR Preview: generate a quick QR code from the address bar to test your local
+            development server on a physical phone over Wi-Fi in seconds
+          </li>
+          <li>
+            Workspace Snapshots: save a named set of open tabs, split views, and device mockups and
+            restore the entire layout in a single click, alongside your current tabs
+          </li>
+        </ul>
+      </section>
+
       {/* Section: Coming Soon (practical tools, zero AI mentions) */}
       <div id="coming-soon" className="scroll-mt-[100px]">
         <h2 className="dia-h2">Coming Soon</h2>
@@ -97,28 +121,7 @@ export function FeaturesWorkspaceAndRoadmap() {
           </li>
         </ul>
 
-        <p>
-          <strong className="font-bold text-black">For Web Developers</strong>
-        </p>
-        <ul>
-          <li>
-            Synchronized interactions across Device Mockups: scroll, click, type in forms, or toggle
-            dark mode on one frame in Compare Screens and watch phone, tablet, and desktop mockups
-            mirror your actions simultaneously
-          </li>
-          <li>
-            API Request Replay &amp; Response Mocking: edit JSON payloads or force 401/500 status codes
-            in the Network panel to test error handling without touching your backend
-          </li>
-          <li>
-            Localhost LAN QR Preview: generate a quick QR code from the address bar to test your local
-            development server on a physical phone over Wi-Fi in seconds
-          </li>
-          <li>
-            Workspace Snapshots: save a named set of open tabs, split views, and device mockups and
-            restore the entire layout in a single click
-          </li>
-        </ul>
+
 
         <h3 className="dia-h3">Follow the Roadmap</h3>
         <p>
