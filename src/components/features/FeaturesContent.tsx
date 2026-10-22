@@ -6,6 +6,7 @@ import { FEATURES_SIDEBAR_LINKS } from './featuresData';
 import { FeaturesMediaAndTools } from './FeaturesMediaAndTools';
 import { FeaturesDeveloperSection } from './FeaturesDeveloperSection';
 import { FeaturesWorkspaceAndRoadmap } from './FeaturesWorkspaceAndRoadmap';
+import { FeaturesDemos } from './FeaturesDemos';
 import { FeaturesFaq } from './FeaturesFaq';
 
 // Two-column editorial Features view in Dia's layout, written in direct developer voice.
@@ -160,7 +161,10 @@ export function FeaturesContent() {
               {/* Sections 6 & 7: Everyday Polish & Notes + Coming Soon */}
               <FeaturesWorkspaceAndRoadmap />
 
-              {/* Section 8: FAQ Accordion */}
+              {/* Section 8: Demos in Action */}
+              <FeaturesDemos />
+
+              {/* Section 9: FAQ Accordion */}
               <FeaturesFaq />
             </div>
           </div>

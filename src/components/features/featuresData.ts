@@ -19,6 +19,7 @@ export const FEATURES_SIDEBAR_LINKS: SidebarSection[] = [
   { id: 'developer-tools', label: 'Developer & Design Tools' },
   { id: 'everyday-polish-and-notes', label: 'Everyday Polish & Notes' },
   { id: 'coming-soon', label: 'Coming Soon' },
+  { id: 'demos', label: 'Demos in Action' },
   { id: 'faq', label: 'FAQ' },
   {
     id: 'release-notes',
