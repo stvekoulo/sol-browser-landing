@@ -20,14 +20,14 @@ export function FeaturesDemos() {
           automatically samples the site&apos;s background color to tint the browser chrome.
         </p>
 
-        <figure className="my-[12px] overflow-hidden rounded-[12px] border border-black/10 bg-[#e8ede4] shadow-lg">
+        <figure className="my-[12px] overflow-hidden rounded-[12px] border border-black/10 bg-[#eeeeee] shadow-lg">
           <img
             src="/captures/demo-1.PNG"
             alt="Sol Browser Compare Screens mode previewing devbenin.bj inside iPhone and MacBook frames side by side"
             className="block h-auto w-full object-contain"
             draggable={false}
           />
-          <figcaption className="border-t border-black/10 bg-[#f1f4ee] px-[16px] py-[10px] text-[13px] leading-[1.4] text-black/75">
+          <figcaption className="border-t border-black/10 bg-[#f1f1f1] px-[16px] py-[10px] text-[13px] leading-[1.4] text-black/75">
             Compare Screens mode: <strong className="font-medium text-black">devbenin.bj</strong>{' '}
             rendered simultaneously inside iPhone and MacBook frames with dynamic sage-green chrome
             tinting.
@@ -46,7 +46,7 @@ export function FeaturesDemos() {
           144p and audio, and downloads the file through a floating progress card with pause and resume.
         </p>
 
-        <figure className="my-[12px] overflow-hidden rounded-[12px] border border-black/10 bg-[#0d1520] shadow-lg">
+        <figure className="my-[12px] overflow-hidden rounded-[12px] border border-black/10 bg-[#111111] shadow-lg">
           <video
             src="/captures/demo-2.mp4"
             controls

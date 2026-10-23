@@ -4,13 +4,13 @@
 
 The website of [Sol](https://gitlab.com/stevencrdkoulo/sol-browser), a light web browser for Windows with tabs in a sidebar, built-in developer tools and Sol AI, an optional assistant that runs on your own ChatGPT plan.
 
-![Sol, the browser presented by this site](public/captures/sol-browser.png)
+![Sol — monochrome visual identity](public/wallpaper.png)
 
 ## Pages
 
 | Route | Content |
 |---|---|
-| `/` | Hero, download button and the product video |
+| `/` | Monochrome identity, supplied wallpaper, introduction and download button |
 | `/features` | Why Sol exists, Sol AI with ChatGPT, isolated site sessions, device mockups and inspection, everyday polish and notes, roadmap, FAQ |
 | `/security` | Keeping Sol secure, permissions, extensions and backups, reporting and open source, FAQ |
 

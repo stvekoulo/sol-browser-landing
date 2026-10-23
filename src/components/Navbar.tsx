@@ -13,7 +13,7 @@ export function Navbar() {
         aria-label="Main navigation"
         className="pointer-events-auto flex items-center justify-center"
       >
-        <div className="bg-white/95 backdrop-blur-md border border-black/[0.08] rounded-[16px] shadow-[0_1px_2px_rgba(0,0,0,0.05),0_8px_20px_-6px_rgba(0,0,0,0.08)] flex items-center h-[52px] pl-[8px] pr-[24px] gap-[14px] text-[#111111]">
+        <div className="bg-black/90 backdrop-blur-md border border-white/[0.15] rounded-[16px] shadow-[0_1px_2px_rgba(0,0,0,0.05),0_8px_20px_-6px_rgba(0,0,0,0.08)] flex items-center h-[52px] pl-[8px] pr-[24px] gap-[14px] text-[#f5f5f5]">
           <Link
             href="/"
             aria-label="Sol Home"
@@ -24,7 +24,7 @@ export function Navbar() {
               alt="Sol"
               width={26}
               height={26}
-              className="size-[26px] object-contain select-none"
+              className="size-[34px] object-contain select-none"
               draggable={false}
             />
           </Link>

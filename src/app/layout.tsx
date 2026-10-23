@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://solbrowser.com';
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#ffcb30',
+  themeColor: '#050505',
 };
 
 const DESCRIPTION =
@@ -45,10 +45,10 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: [
       {
-        url: '/captures/sol-browser.png',
-        width: 1920,
-        height: 1080,
-        alt: 'Sol Browser on Windows',
+        url: '/wallpaper.png',
+        width: 1672,
+        height: 941,
+        alt: 'Sol — a new perspective on the web',
       },
     ],
   },
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sol | More than a browser. Your web workspace.',
     description: DESCRIPTION,
-    images: ['/captures/sol-browser.png'],
+    images: ['/wallpaper.png'],
   },
   robots: {
     index: true,

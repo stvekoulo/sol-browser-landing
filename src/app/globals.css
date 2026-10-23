@@ -112,7 +112,7 @@ body {
 .dia-rich-text ul li ul { margin-top: 4px; margin-bottom: 4px; }
 .dia-rich-text ul li ul li::before { content: "\25E6"; }
 .dia-rich-text a {
-  color: rgba(88, 99, 234, 1);
+  color: #222;
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: currentColor;
