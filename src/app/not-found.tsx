@@ -13,7 +13,7 @@ export default function NotFound() {
             alt="Sol"
             width={30}
             height={30}
-            className="size-[30px] object-contain select-none"
+            className="size-[30px] object-contain select-none invert"
             draggable={false}
           />
           <span className="font-serif text-[32px] leading-none font-medium tracking-[-0.03em]">

@@ -10,7 +10,7 @@ The website of [Sol](https://gitlab.com/stevencrdkoulo/sol-browser), a light web
 
 | Route | Content |
 |---|---|
-| `/` | Monochrome identity, supplied wallpaper, introduction and download button |
+| `/` | Original hero composition, supplied background, browser preview, product video and download button |
 | `/features` | Why Sol exists, Sol AI with ChatGPT, isolated site sessions, device mockups and inspection, everyday polish and notes, roadmap, FAQ |
 | `/security` | Keeping Sol secure, permissions, extensions and backups, reporting and open source, FAQ |
 
